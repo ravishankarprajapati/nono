@@ -94,3 +94,83 @@ And exit from terminal
 
 14 . You can run the proxy
 	./fab3
+	
+	
+	
+##P6 - Develop a voting application using Hyperledger and Ethereum. Build a decentralized app that combines Ethereum's Web3 and Solidity smart contracts with Hyperledger hosting Fabric and Chaincode EVM
+
+Code:
+
+pragma solidity 0.8.17; 
+contract VotingForTopper{
+ address owner; 
+ string purpose; 
+ struct Voter{
+ bool authorized; 
+ bool voted; 
+ } 
+uintTotalVotes; 
+uintteamA; 
+uintteamB; 
+uintteamC; 
+ mapping(address=>Voter) info; 
+constructor(string memory _name) public{ 
+ purpose = _name; 
+ owner = msg.sender; 
+ } 
+ modifier ownerOn(){ 
+ require(msg.sender==owner); 
+ _; 
+ } 
+ function authorize(address _person) ownerOn public{
+ info[_person].authorized = true; 
+ } 
+ function teamAF(address _address) public { 
+ require(!info[_address].voted,"already voter person");  require(info[_address].authorized,"You have no right for Vote");  info[_address].voted = true; 
+teamA++; 
+TotalVotes++; 
+ } 
+ function teamBF(address _address) public { 
+ require(!info[_address].voted,"already voter person");  require(info[_address].authorized,"You have no right for Vote");  info[_address].voted = true; 
+teamB++; 
+TotalVotes++; 
+ } 
+ function teamCF(address _address) public returns(string memory){  require(!info[_address].voted,"already voter person");  require(info[_address].authorized,"You have no right for Vote");  info[_address].voted = true; 
+teamC++; 
+TotalVotes++; 
+return("Thanks for Voting"); 
+ } 
+ function TotalVotesF() public view returns(uint){  return TotalVotes; 
+ } 
+ function resultOfVoting() public view returns(string memory){  if(teamA>teamB){ 
+ if(teamA>teamC){
+ return "A is Winning"; 
+ } 
+ else if(teamC>teamA){
+ return "C is Winiing"; 
+ } 
+ } 
+ else if(teamB>teamC){
+ return "B is Winiing"; 
+ } 
+ else if(teamC>teamB){
+ return "C is Winiing"; 
+ } 
+ else if(teamA==teamB&&teamA==teamC || teamB==teamC){
+ return "No One is Winiing"; 
+ } 
+ } 
+}
+
+1 . Open terminal
+	
+	Npm install -g truffle
+	Git clone https://github.com/tko22/truffle-webpack-boilerplate
+	Cd truffle-webpack-boilerplate
+	Npm install
+	Truffle develop
+	Compile
+	Npm run dev
+
+	Start localhost:8080
+
