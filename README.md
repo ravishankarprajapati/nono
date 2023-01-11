@@ -86,95 +86,83 @@ Type cat Enumaration.txt
 
 
 # P3  . Practical on vulnerability scanning and assessment.
+
 To setup kali Linux for vulnerability scanning and use Nikto to scan for known vulnerabilities, perform the following steps. 
+
 S1 . Log in to kali Linux and open Terminal 
+
 S2 . Type the command nikto-h <URL of website you want to scan>and press Enter
+
 S3 . Note a vulnerability number, for example 23654, and open a web browser S
+
 S4 .  Type the URL https://cve.mitre.org/ in the browser to open the common Vulnerabilities and Exposures websites, as shown in figure
+
 S5 . Click on Search CVE List and type your vulnerability number in the text box, as shown in figure and press enter.
+
 It will give a list of vulnerability details, as shown in figure
 
+	
+# P4 . : Practical on use of Social Engineering Toolkit. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-P4 . : Practical on use of Social Engineering Toolkit. 
 Lab Environment: 
+
 To carry out this lab, you will require the following: 
+
 Kali Linux as virtual machine 
+
 Web browser with Internet connection 
+
 Administrative privileges 
+
 Implementation: 
+
 S1 . Log in to Kali Linux as a Virtual Machine. 
+
 S2 . Go to Applications > Exploitation Tools > SET Social Engineering Tool 
+
 Then you will get the Set menu, as shown in figure.
 Now the list of social engineering methods will appear, as shown in figure. 
+
 S3 . Type '1' to choose the Social Engineering Attacks, as shown in figure
+
 S4 . Type '2' to choose the Website attack vectors, as shown in figure
+
 S5 . In the next screen that appears, type '3' to choose the credential harvester attack methods. as shown in figure.
+
 S6 . Type '2' to choose Site Cloner, as shown in figure
+
 Then the following screen will appear, as shown in figure
- Now it will prompt for IP address for the PostBack in Harvester/Tabnabbing, as shown in figure
+Now it will prompt for IP address for the PostBack in Harvester/Tabnabbing, as shown in figure
+
 S7 . Type the IP address of kali Linux of VM. here, we have used 192.xx.xx.xx as the IP address, as shown in figure
 Then it will prompt to enter the URL of the website which is required to be cloned. 
+
 S8 . Type www.facebook.com, as shown in figure, then the following screen will appear, as shown in figure
+
 S9 . Launch a web browser in Kali Linux and open an email services, as shown in figure 
+
 S10 . Compose an email and provide the target users email id in the to textbox, as shown in figure
+
 S11 . Click on the link icon 
+
 S12 . Type a text in the Text to display textbox. 
+
 S13 . Click on the radio button Web address. 
+
 S14. Type the fake URL https://facebook.com/ in the Web address text box 
+
 S15 . Click on OK
+
 Now the text that you have types will appear in the email body as a link, as shown in figure 
+
 S16 . Click on send 
+
 Now when the target user will open his email, he will find the link, as shown in the figure
 When the target user will click on the link, he/she will be presented with a replica of Facebook.com, as shown in figure
 The Facebook.com page will ask the target user to enter the email and password for view the picture. 
 When the target user enters the credentials, the SET terminal of Kali Linux will fetch the email id and password.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-P5 . Practical on Wireless and Bluetooth attacks. 
+	
+# P5 . Practical on Wireless and Bluetooth attacks. 
 Lab Environment: 
 1. Kali Linux as the attacker machine 
 2. Web browser with internet connection 
@@ -194,15 +182,7 @@ S6 . Now, wait to capture the handshake packet. Once you have capture a packet, 
 S7 . You will see a capture .cap file in your /root location which is a default location 8. Now, run this capture file against a wordlist to crack the WPA key
 
 
-
-
-
-
-
-
-
-
-P6 . Practical on Exploiting Web-based applications. 
+# P6 . Practical on Exploiting Web-based applications. 
 Lab Objectives: 
 Enumerate a webserver by finding files and directories using DirBuster.
  Lab Environment: 
@@ -223,15 +203,7 @@ After running DirBUster fro some time, you will see the results in Tree View, as
 
 
 
-
-
-
-
-
-
-
-
-P7 . Practical on using Metasploit Framework for exploitation. 
+# P7 . Practical on using Metasploit Framework for exploitation. 
 Lab Objectives: 
 Exploitable shellshock vulnerability using Metasploit 
 Lab Environment: 
@@ -279,13 +251,7 @@ Reboot or shutdown the machine etc.
 24. Type "ipconfig" and press enter to view the IP configuration, as shown in figure
 
 
-
-
-
-
-
-
-P8 . Practical on injecting Code in Data Driven Applications: SQL Injection.
+# P8 . Practical on injecting Code in Data Driven Applications: SQL Injection.
  Lab Objectives: 
 Test a website for SQL Injection Vulnerability 
 Lab Environment: 
@@ -317,33 +283,7 @@ figure 7a and 7b displays the output
 figure 8a and 8b displays the output
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-P9 . Wireless Network threats (sniff wifi hotspots, analyze strength, and discover wireless access points). 
+# P9 . Wireless Network threats (sniff wifi hotspots, analyze strength, and discover wireless access points). 
 Lab Objectives: 
 1. Install and configure InSSIDer 
 2. Check the wireless signal strength 
