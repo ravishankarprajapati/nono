@@ -1,26 +1,37 @@
 P1 . Use of open-source intelligence and passive reconnaissance 
+
 A . using Recon-ng tool
+
 S1 . Open kali and type Recon-ng
+
 S2 .  Initially there are no modules installed. To install the modules.
 	A . Discovery module [ marketplace install discovery] 
 	B . Recon module [ marketplace install recon]
 	C . importing module   ……
 	D . Exploitation module  ……
 	E . Reporting module  ……..
+
 S3 . To create new workspace
 	Workspace list
+
 S4 . install the module recon/domain-contacts/whois_pocs and load the installed module
 	Marketplace install recon/domains-contacts/whois_pocs
+
 S5 . Set the option and run the module.
 	Option list
+
 S6 . type the back and enter the workspace. And install another module recon/profile-profiles/namechk and load the module to validate the user, brandon stout.
 	Back
 	Marketplace install recon/profiles-profiles/namechk
 	Modules load recon/profiles-profiles/namechk
+
 S7 . set the option and run the module
 	Option list
 	Run
+
 S8 . type back and enter the workspace. We will install another module recon/profile-profiles/profiler to check the existence of user Brandon Stout
+
+
 S9 . Set the option and run the module
 	Option list
 	Option set SOURCE Brandon Stout
@@ -32,8 +43,11 @@ S10 . Generate a report. We will install another module reporting/html and load 
 S11 . Html file  is generated in given location. Go the location and double click on the file
 
 B . Windows command line
+
 S1 . ping -h
+
 S2 . tracert
+
 S3 . nslookup
 
 
