@@ -51,54 +51,41 @@ S2 . tracert
 S3 . nslookup
 
 
+# P2 . Practical on enumerating host, port, and Service Scanning
 
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-P2 . Practical on enumerating host, port, and Service Scanning
 Implementations: 
+
 To enumerate services on target machine, perform the following 
+
 S1 . Launch Kali Linux 
+
 S2 . Select Application > Information Gathering > Nmap, as shown in the figure. 
+
 Then the following screen will appear, as shown in figure.
+
 S3 . Type "nmap -sP 192.xx.xx.xx/2"
+
 Then 'Nmap' will scan all the nodes on the given network range and display all the hosts that are running
+
 S4 . Type "nmap-sS <ip address of the target machine> ", and press Enter, as shown in figure (here we used 192.xx.xx.xx as the IP address)
+
 Then a Stealthy syn scan will be initiated, and all the open ports that are running on the machine will be displayed, as shown in figure. Now we can see all the open ports along with the services. We will find version of each of these services running on the open port by performing a syn with version detection switch. 
+
 S5 . Type "nmap -sSV -O <IP address of targeted machine> "
+
 Now, the Nmap performs the scan and displays the versions of the services, as shown on figure. We have found the enumerated result. We will now save the scan result
+
 S6 . Type "nmap sSV -O <Ip address of target machine> oN Enumeration.txt", and press Enter
 Nmap will now perform Stealthy Scan with version and OS detection, and save the result in a text file (Enumeration.txt) , which will be located on home (root) directory.
+
 S7 . Click on Places > Home Folder 
+
 S8 . Double click on the file Enumeration.txt,
+
 Type cat Enumaration.txt
 
 
-
-
-
-
-
-
-
-
-P3  . Practical on vulnerability scanning and assessment.
+# P3  . Practical on vulnerability scanning and assessment.
 To setup kali Linux for vulnerability scanning and use Nikto to scan for known vulnerabilities, perform the following steps. 
 S1 . Log in to kali Linux and open Terminal 
 S2 . Type the command nikto-h <URL of website you want to scan>and press Enter
