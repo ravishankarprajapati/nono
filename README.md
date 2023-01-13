@@ -5,6 +5,7 @@ Theory:
 Apache Hadoop is an open-source software framework used to store, manage and process large datasets for various big data computing applications running under clustered systems. It is Java-based and uses Hadoop Distributed File System (HDFS) to store its data and process data using MapReduce. 
 Implementation: 
 
+
 * Installing Java 
 
 1 . In Ubuntu, open the terminal and enter the following command: 
@@ -46,6 +47,7 @@ Implementation:
 8 . Verify if the password-less SSH is functional. 
 
 	$ ssh localhost
+
 
 * Install Apache Hadoop 
 
