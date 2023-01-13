@@ -6,8 +6,10 @@ Apache Hadoop is an open-source software framework used to store, manage and pro
 Implementation: 
 
 # Installing Java 
+
 1 . In Ubuntu, open the terminal and enter the following command: 
 	$ sudo apt install default-jdk default-jre -y 
+
 2. Verify the installation via 
 	$ java -version 
 # Create new user Hadoop and configure password-less SSH 
