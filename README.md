@@ -97,3 +97,23 @@ Implementation:
 3. Add the changes to the memory
 
 	$ source ~/.bashrc
+
+* Configure Java Environment Variables
+
+1. Find the OpenJDK directory and copy the output
+
+	$ readlink -f /usr/bin/javac
+
+2. Edit the hadoop-env.sh file.
+	
+	$ sudo nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+
+3. Add the following lines to the file. Then, close and save the file.
+	
+	export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+	export HADOOP_CLASSPATH+=" $HADOOP_HOME/lib/*.jar"
+
+4. Browse to the hadoop lib directory.
+	$ cd /usr/local/hadoop/lib
+
