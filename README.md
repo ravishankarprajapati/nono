@@ -8,11 +8,14 @@ Implementation:
 # Installing Java 
 
 1 . In Ubuntu, open the terminal and enter the following command: 
+	
 	$ sudo apt install default-jdk default-jre -y 
 
 2. Verify the installation via 
+	
 	$ java -version 
-# Create new user Hadoop and configure password-less SSH 
+* Create new user Hadoop and configure password-less SSH 
+
 1 . Create the new user 
 	$ sudo adduser hadoop 
 2 . Add the hadoop user to the sudo group. 
