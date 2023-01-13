@@ -14,7 +14,7 @@ Implementation:
 2. Verify the installation via 
 	
 	$ java -version 
-* Create new user Hadoop and configure password-less SSH 
+** Create new user Hadoop and configure password-less SSH 
 
 1 . Create the new user 
 	$ sudo adduser hadoop 
