@@ -348,3 +348,10 @@ Implementation:
 
 	$ jps
 
+* Access Apache Hadoop Web Interface
+
+In your web browser enter the URLs given below to access the interface
+
+		http://localhost:9870
+
+		http://localhost:8088
