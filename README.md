@@ -156,23 +156,41 @@ Implementation:
 	$ sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 
 11. Add the following lines. Close and save the file.
+	
 	<configuration>
+	
 		<property>
+			
 			<name>dfs.replication</name>
+			
 			<value>1</value>
+			
 		</property>
-		<property>	
+	
+		<property>
+			
 			<name>dfs.name.dir</name>
+			
 			<value>file:///home/hadoop/hdfs/namenode</value>
+			
 		</property>
+	
 		<property>
+			
 			<name>dfs.data.dir</name>
+			
 			<value>file:///home/hadoop/hdfs/datanode</value>
+			
 		</property>
+	
 		<property>
+			
 			<name>dfs.permissions.enabled</name>
+			
 			<value>false</value>
+			
 			</property>
+	
 	</configuration>
 
 12. Edit mapred-site.xml configuration file to define MapReduce values.
