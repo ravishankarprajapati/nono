@@ -274,3 +274,77 @@ Implementation:
 
 13. Add the following lines. Save and close the file
 
+<configuration>
+	
+	<property>
+	
+		<name>mapreduce.framework.name</name>
+	
+		<value>yarn</value>
+	</property>
+
+	<property>
+
+		<name>yarn.app.mapreduce.am.env</name>
+
+		<value>HADOOP_MAPRED_HOME=/usr/local/hadoop</value>
+
+		<description>Change this to your hadoop location.</description>
+	</property>
+
+	<property>
+
+		<name>mapreduce.map.env</name>
+
+		<value>HADOOP_MAPRED_HOME=/usr/local/hadoop</value>
+
+		<description>Change this to your hadoop location.</description>
+	
+	</property>
+
+	<property>
+
+		<name>mapreduce.reduce.env</name>
+
+		<value>HADOOP_MAPRED_HOME=/usr/local/hadoop/<value>
+
+		<description>Change this to your hadoop location.</description>
+
+	</property>
+</configuration>
+
+14. Edit the yarn-site.xml configuration file and define YARN-related settings.
+
+	$ sudo nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
+
+15. Add the following lines. Save and close the file.
+	
+	<configuration>
+	
+		<property>
+		
+			<name>yarn.nodemanager.aux-services</name>
+
+			<value>mapreduce_shuffle</value>
+	
+		</property>
+	
+	</configuration>
+
+16. Validate the Hadoop configuration and format the HDFS NameNode.
+
+	$ hdfs namenode -format
+* Start the Apache Hadoop Cluster
+
+1. Start the NameNode and DataNode.
+	
+	$ start-dfs.sh
+
+2. Start the YARN resource and node managers.
+
+	$ start-yarn.sh
+
+3. Verify all the running components.
+
+	$ jps
+
