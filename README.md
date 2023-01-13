@@ -132,11 +132,17 @@ Implementation:
 8. Add the following lines. Save and close the file.
 
 	<configuration>
+		
 		<property>
+			
 			<name>fs.default.name</name>
+			
 			<value>hdfs://0.0.0.0:9000</value>
+			
 			<description>The default file system URI</description>
+		
 		</property>
+	
 	</configuration>
 
 9. Create a directory for storing node metadata and change the ownership to hadoop.
