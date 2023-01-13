@@ -116,4 +116,62 @@ Implementation:
 
 4. Browse to the hadoop lib directory.
 	$ cd /usr/local/hadoop/lib
+	
+5. Download the Javax activation file.
+
+	$ sudo wget https://jcenter.bintray.com/javax/activation/javax.activationapi/1.2.0/javax.activation-api-1.2.0.jar
+
+6. Verify the Hadoop version.
+
+	$ hadoop version
+
+7. Edit the core-site.xml configuration file to specify the URL for your NameNode.
+
+	$ sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
+
+8. Add the following lines. Save and close the file.
+
+	<configuration>
+		<property>
+			<name>fs.default.name</name>
+			<value>hdfs://0.0.0.0:9000</value>
+			<description>The default file system URI</description>
+		</property>
+	</configuration>
+
+9. Create a directory for storing node metadata and change the ownership to hadoop.
+
+	$ sudo mkdir -p /home/hadoop/hdfs/{namenode,datanode}
+
+	$ sudo chown -R hadoop:hadoop /home/hadoop/hdfs
+
+10. Edit hdfs-site.xml configuration file to define the location for storing node metadata, fsimage file.
+
+	$ sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+
+11. Add the following lines. Close and save the file.
+	<configuration>
+		<property>
+			<name>dfs.replication</name>
+			<value>1</value>
+		</property>
+		<property>	
+			<name>dfs.name.dir</name>
+			<value>file:///home/hadoop/hdfs/namenode</value>
+		</property>
+		<property>
+			<name>dfs.data.dir</name>
+			<value>file:///home/hadoop/hdfs/datanode</value>
+		</property>
+		<property>
+			<name>dfs.permissions.enabled</name>
+			<value>false</value>
+			</property>
+	</configuration>
+
+12. Edit mapred-site.xml configuration file to define MapReduce values.
+
+	$ sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml
+
+13. Add the following lines. Save and close the file
 
